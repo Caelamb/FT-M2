@@ -1,0 +1,404 @@
+/* Mixins */
+/* Estilos para la página principal */
+.home {
+  color: #000;
+  background-color: #fff;
+  padding: 20px;
+  /* Introducción */
+  /* Imágenes de música */
+  /* Sección de música nueva */
+  /* Sección de actualidad */
+}
+.home .intro h2 {
+  padding: 15px;
+}
+.home .intro p {
+  padding: 0 15px;
+}
+.home .music-images {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.home .music-images img {
+  width: 28%;
+  margin: 20px 2.5%;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  height: 100%;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.home .musica-nueva {
+  padding: 15px;
+}
+.home .musica-nueva h3 {
+  margin-top: 11px;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.home .musica-nueva p {
+  margin-top: 13px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.home .actual {
+  margin-top: 60px;
+  border-top: 1px solid #ccc;
+  padding: 50px 60px;
+  display: flex;
+  justify-content: center;
+}
+.home .actual .actual-text {
+  width: 50%;
+}
+.home .actual .actual-text h3 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.home .actual .actual-text p {
+  margin-bottom: 26px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.home .actual .actual-text .btn {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.home .actual .actual-text .btn:hover {
+  background-color: #c0392b;
+}
+.home .actual .actual-img {
+  width: 46%;
+  margin-left: 4%;
+}
+.home .actual .actual-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+/* Estilos para la barra de navegación */
+nav {
+  background-color: #333;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #5E6164;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Russo One', sans-serif;
+  color: #23293B;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* navigation.less */
+.navbar {
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar ul li {
+  margin: 0 10px;
+}
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.navbar ul li a:hover {
+  color: #999;
+}
+footer {
+  color: #22283B;
+  background: #f4f4f4;
+  padding: 20px 0;
+  border: 1px double #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* home-page.less */
+.home .intro h2 {
+  padding: 15px;
+  font-size: 4rem;
+  color: #000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.home .intro p {
+  padding: 0 15px;
+  font-size: 1.8rem;
+  color: #000;
+}
+.home .music-images {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.home .music-images img {
+  width: 28%;
+  margin: 20px 2.5%;
+  border-radius: 20px;
+  height: 100%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+.home .music-images img:hover {
+  transform: scale(1.1);
+}
+.home .musica-nueva {
+  padding: 15px;
+}
+.home .musica-nueva h3 {
+  margin-top: 11px;
+  font-size: 3rem;
+  color: #000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.home .musica-nueva p {
+  margin-top: 13px;
+  font-size: 1.6rem;
+  color: #000;
+}
+.home .actual {
+  margin-top: 60px;
+  border-top: 1px solid #ccc;
+  padding: 50px 60px;
+  display: flex;
+  justify-content: center;
+}
+.home .actual .actual-text {
+  width: 50%;
+}
+.home .actual .actual-text h3 {
+  margin-bottom: 10px;
+  font-size: 4rem;
+  color: #000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.home .actual .actual-text p {
+  margin-bottom: 26px;
+  font-size: 1.8rem;
+  color: #000;
+}
+.home .actual .actual-text .btn {
+  background-color: #8B0000;
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  border: 2px solid #8B0000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.home .actual .actual-text .btn:hover {
+  background-color: #000;
+  color: #8B0000;
+}
+.home .actual .actual-img {
+  width: 46%;
+  margin-left: 4%;
+}
+.home .actual .actual-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
