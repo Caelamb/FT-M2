@@ -9,8 +9,22 @@ var traverseDomAndCollectElements = function(matchFunc, startEl) {
   // usa matchFunc para identificar elementos que matchien
 
   // TU CÓDIGO AQUÍ
-  
+  function traverse(currentEl) {
+    if (matchFunc(currentEl)) {
+      resultSet.push(currentEl);
+    }
+
+    var children = currentEl.children;
+    for (var i = 0; i < children.length; i++) {
+      traverse(children[i]);
+    }
+  }
+
+  traverse(startEl);
+
+  return resultSet;
 };
+
 
 // Detecta y devuelve el tipo de selector
 // devuelve uno de estos tipos: id, class, tag.class, tag
