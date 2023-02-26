@@ -2,15 +2,20 @@ import Card from './Card';
 
 export default function Cards(props) {
    const { characters } = props;
-   // eslint-disable-next-line array-callback-return
-   const cards = characters.map((character) => {
-      <Card
-         key={character.id}
-         name={character.name} 
-         species={character.species} 
-         gender={character.gender} 
-         image={character.image} 
-      />
-   })
-   return <div>{cards}</div>;
-}
+   return (
+      <div>
+         {characters.map((props) => {
+            return (
+               <Card
+                  key={props.id}
+                  name={props.name} 
+                  species={props.species} 
+                  gender={props.gender} 
+                  image={props.image} 
+                  onClose={() => window.alert('Emulamos que se cierra la card')}
+               />
+            )
+         })}
+      </div>
+   )
+};
