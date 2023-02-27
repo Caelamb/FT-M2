@@ -14,7 +14,7 @@ export default class Animals extends React.Component {
             <div>
          <h5>{animal.name}</h5>
          <img src={animal.image} alt={animal.name} width="300px" />
-         <span>{animal.species}</span>
+         <span>{animal.specie}</span>
        </div>)
         })}
           
