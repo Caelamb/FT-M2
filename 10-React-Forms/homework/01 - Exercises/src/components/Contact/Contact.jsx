@@ -5,7 +5,7 @@ import './Contact.modules.css'
 const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
 export function validate(inputs) {
-  let errors = {};
+  const errors = {};
 
   if (!inputs.name) {
     errors.name = 'Se requiere un nombre';
@@ -25,15 +25,15 @@ export function validate(inputs) {
 
 export default function Contact () {
   const [inputs, setInputs] = React.useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [errors, setErrors] = React.useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   function handleChange(event) {
@@ -50,23 +50,15 @@ export default function Contact () {
    );
   }
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
-    const errorsArray = Object.values(validate(inputs));
-
-    if (errorsArray.length === 0) {
-      alert('Datos completos');
-      setInputs({
-        name: '',
-        email: '',
-        message: '',
-      });
-      setErrors(validate(inputs));
+    if(Object.keys(errors).length) {
+      window.alert('Debe llenar todos los campos');
     } else {
-      alert('Debe llenar todos los campos');
+      window.alert('Datos completos');
     }
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -77,8 +69,9 @@ export default function Contact () {
         type="text" 
         value={inputs.name}
         onChange={handleChange}
-        className={errors.name && 'warning'} />
-        <p className='danger'>{errors.name}</p>
+        className={errors.name ? "warning" : null} />
+        <p className='danger'>{errors.name && errors.name}</p>
+
        <label>Correo Electrónico:</label>
        <input 
         name="email"
@@ -87,16 +80,17 @@ export default function Contact () {
         value={inputs.email}
         onChange={handleChange} 
         className={errors.email && 'warning'}/>
-        <p className='danger'>{errors.email}</p>
+        
+
        <label>Mensaje:</label>
-       <input 
+       <textarea 
         name="message" 
         placeholder="Escribe tu mensaje..." 
         type="text" 
         value={inputs.message} 
         onChange={handleChange}
         className={errors.message && 'warning'} />
-        <p className='danger'>{errors.message}</p>
+        
        <button type="submit">Enviar</button>
      </form>
   )
